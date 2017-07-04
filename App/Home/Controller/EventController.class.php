@@ -26,12 +26,12 @@ class EventController extends Controller
             $username=I('post.username');
             $this->assign('username',$username);
             if($Verify->check($code)){
-
                 $password=I('post.password');
                 $model=M('tb_user');
                 $res=$model->where("usernameid=$username")->select();
                 if($res[0]["usernameid"]==$username){
                     if($res[0]["password"]==$password){
+                        cookie("username",$username);
                         $this->redirect('Index/index');
                     }else{
                         $this->assign('error2','密码错误');
@@ -50,5 +50,10 @@ class EventController extends Controller
             }
 
         }
+    }
+    //退出登陆
+    public function logout(){
+        cookie("username",null);
+        $this->redirect("Index/login");
     }
 }

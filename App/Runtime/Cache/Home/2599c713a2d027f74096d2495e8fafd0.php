@@ -34,13 +34,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="">消息 <span class="badge">1</span></a></li>
-            <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">admin <span class="caret"></span></a>
+            <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo (cookie('username')); ?><span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-menu-left">
                 <li><a title="查看或修改个人信息" data-toggle="modal" data-target="#seeUserInfo">个人信息</a></li>
                 <li><a title="查看您的登录记录" data-toggle="modal" data-target="#seeUserLoginlog">登录记录</a></li>
               </ul>
             </li>
-            <li><a href="login.html" onClick="if(!confirm('是否确认退出？'))return false;">退出登录</a></li>
+            <li><a href="<?php echo U('Event/logout');?>" onClick="if(!confirm('是否确认退出？'))return false;">退出登录</a></li>
             <li><a data-toggle="modal" data-target="#WeChat">帮助</a></li>
           </ul>
           <form action="" method="post" class="navbar-form navbar-right" role="search">
@@ -54,48 +54,52 @@
       </div>
     </nav>
   </header>
-  <div class="row">
-    <aside class="col-sm-3 col-md-2 col-lg-2 sidebar">
+  <aside class="col-sm-3 col-md-2 col-lg-2 sidebar">
       <ul class="nav nav-sidebar">
-        <li><a href="index.html">报告</a></li>
+        <li class='a1'><a href="<?php echo U('Index/index?');?>?id=1" draggable="false">报告</a></li>
       </ul>
       <ul class="nav nav-sidebar">
-        <li class="active"><a href="article.html">文章</a></li>
-        <li><a href="notice.html">公告</a></li>
-        <li><a href="comment.html">评论</a></li>
-        <li><a data-toggle="tooltip" data-placement="top" title="网站暂无留言功能">留言</a></li>
+        <li class='a2'><a href="article.html?id=2" draggable="false">文章</a></li>
+        <li class='a3'><a href="notice.html?id=3" draggable="false">公告</a></li>
+        <li class='a4'><a href="comment.html?id=4" draggable="false">评论</a></li>
+        <li ><a data-toggle="tooltip" data-placement="top" title="" draggable="false" data-original-title="网站暂无留言功能">留言</a></li>
       </ul>
       <ul class="nav nav-sidebar">
-        <li><a href="category.html">栏目</a></li>
-        <li><a class="dropdown-toggle" id="otherMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">其他</a>
+        <li class='a5'><a href="category.html?id=5" draggable="false">栏目</a></li>
+        <li class='a6'><a class="dropdown-toggle" id="otherMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" draggable="false">其他</a>
           <ul class="dropdown-menu" aria-labelledby="otherMenu">
-            <li><a href="flink.html">友情链接</a></li>
-            <li><a href="loginlog.html">访问记录</a></li>
+            <li><a href="flink.html?id=6" draggable="false">友情链接</a></li>
+            <li><a href="loginlog.html?id=6" draggable="false">访问记录</a></li>
           </ul>
         </li>
       </ul>
       <ul class="nav nav-sidebar">
-        <li><a class="dropdown-toggle" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">用户</a>
+        <li class='a7'><a class="dropdown-toggle" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" draggable="false">用户</a>
           <ul class="dropdown-menu" aria-labelledby="userMenu">
-            <li><a href="#">管理用户组</a></li>
-            <li><a href="manage-user.html">管理用户</a></li>
+            <!--<li><a href="#?id=7" draggable="false">管理用户组</a></li>-->
+            <li><a href="manageUser.html?id=7" draggable="false">管理用户</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="loginlog.html">管理登录日志</a></li>
+            <li><a href="loginlog.html?id=7" draggable="false">管理登录日志</a></li>
           </ul>
         </li>
-        <li><a class="dropdown-toggle" id="settingMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">设置</a>
+        <li class='a8'><a class="dropdown-toggle" id="settingMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" draggable="false">设置</a>
           <ul class="dropdown-menu" aria-labelledby="settingMenu">
-            <li><a href="setting.html">基本设置</a></li>
-            <li><a href="readset.html">用户设置</a></li>
+            <li><a href="setting.html?id=8" draggable="false">基本设置</a></li>
+            <li><a href="readset.html?id=8" draggable="false">用户设置</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">安全配置</a></li>
+            <li><a href="#" draggable="false">安全配置</a></li>
             <li role="separator" class="divider"></li>
-            <li class="disabled"><a>扩展菜单</a></li>
+            <li class="disabled"><a draggable="false">扩展菜单</a></li>
           </ul>
         </li>
       </ul>
     </aside>
-    <block name="content"><block>
+  <div class="row">
+    
+   </div>
+    
+    
+    
 </section>
 <!--个人信息模态框-->
 <div class="modal fade" id="seeUserInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -205,7 +209,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="WeChatModalLabel" style="cursor:default;">微信扫一扫</h4>
       </div>
-      <div class="modal-body" style="text-align:center"> <img src="images/weixin.jpg" alt="" style="cursor:pointer"/> </div>
+      <div class="modal-body" style="text-align:center"> <img src="/boke/Public/images/weixin.jpg" alt="" style="cursor:pointer"/> </div>
     </div>
   </div>
 </div>
@@ -217,7 +221,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="areDevelopingModalLabel" style="cursor:default;">该功能正在日以继夜的开发中…</h4>
       </div>
-      <div class="modal-body"> <img src="images/baoman/baoman_01.gif" alt="深思熟虑" />
+      <div class="modal-body"> <img src="/boke/Public/images/baoman/baoman_01.gif" alt="深思熟虑" />
         <p style="padding:15px 15px 15px 100px; position:absolute; top:15px; cursor:default;">很抱歉，程序猿正在日以继夜的开发此功能，本程序将会在以后的版本中持续完善！</p>
       </div>
       <div class="modal-footer">
@@ -236,49 +240,13 @@
     <li class="list-group-item"><span>浏览器：</span>Chrome47</li>
   </ul>
 </div>
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/admin-scripts.js"></script>
-<script src="lib/ueditor/ueditor.config.js"></script> 
-<script src="lib/ueditor/ueditor.all.min.js"> </script> 
-<script src="lib/ueditor/lang/zh-cn/zh-cn.js"></script>  
-<script id="uploadEditor" type="text/plain" style="display:none;"></script>
 <script type="text/javascript">
-var editor = UE.getEditor('article-content');
-window.onresize=function(){
-    window.location.reload();
-}
-var _uploadEditor;
-$(function () {
-    //重新实例化一个编辑器，防止在上面的editor编辑器中显示上传的图片或者文件
-    _uploadEditor = UE.getEditor('uploadEditor');
-    _uploadEditor.ready(function () {
-        //设置编辑器不可用
-        //_uploadEditor.setDisabled();
-        //隐藏编辑器，因为不会用到这个编辑器实例，所以要隐藏
-        _uploadEditor.hide();
-        //侦听图片上传
-        _uploadEditor.addListener('beforeInsertImage', function (t, arg) {
-            //将地址赋值给相应的input,只去第一张图片的路径
-            $("#pictureUpload").attr("value", arg[0].src);
-            //图片预览
-            //$("#imgPreview").attr("src", arg[0].src);
-        })
-        //侦听文件上传，取上传文件列表中第一个上传的文件的路径
-        _uploadEditor.addListener('afterUpfile', function (t, arg) {
-            $("#fileUpload").attr("value", _uploadEditor.options.filePath + arg[0].url);
-        })
-    });
-});
-//弹出图片上传的对话框
-$('#upImage').click(function () {
-    var myImage = _uploadEditor.getDialog("insertimage");
-    myImage.open();
-});
-//弹出文件上传的对话框
-function upFiles() {
-    var myFiles = _uploadEditor.getDialog("attachment");
-    myFiles.open();
-}
+	$(function(){
+		console.log(<?php echo ($_GET['id']); ?>);
+		$(".a"+<?php echo ($_GET['id']); ?>+"").addClass("active");
+	})
+
 </script>
+
 </body>
 </html>

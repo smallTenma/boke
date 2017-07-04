@@ -1,0 +1,66 @@
+[ 2017-07-04T09:10:20+08:00 ] ::1 /boke/index.php/home/index/base
+ERR: 非法操作:base
+
+[ 2017-07-04T09:10:38+08:00 ] ::1 /boke/index.php/home/index/base
+ERR: 模板不存在:./App/Home/View/Index/base.html
+
+[ 2017-07-04T09:36:05+08:00 ] ::1 /boke/index.php/home/index/base
+ERR: 模板不存在:./App/Home/View/Index/base.html
+
+[ 2017-07-04T09:40:46+08:00 ] ::1 /boke/index.php/home/public/base
+ERR: Think\Controller:dispaly方法不存在！
+
+[ 2017-07-04T09:47:36+08:00 ] ::1 /boke/index.php/Home/category.html?id=5
+ERR: 无法加载控制器:Category
+
+[ 2017-07-04T09:47:44+08:00 ] ::1 /boke/index.php/Home/article.html?id=2
+ERR: 无法加载控制器:Article
+
+[ 2017-07-04T09:56:58+08:00 ] ::1 /boke/index.php/Home/Event/logout.html
+ERR: 模板不存在:./App/Home/View/Public/login.html
+
+[ 2017-07-04T09:58:06+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:29+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:56+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:57+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:57+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:57+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:57+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:57+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:58+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:58+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:00:58+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:04:35+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:04:36+08:00 ] ::1 /boke/index.php/Home/Event/Index/login
+ERR: 非法操作:Index
+
+[ 2017-07-04T10:04:41+08:00 ] ::1 /boke/index.php/Home/Event/Home/Index/login
+ERR: 非法操作:Home
+
+[ 2017-07-04T10:06:15+08:00 ] ::1 /boke/index.php/Home/Event/Home/Index/login
+ERR: 非法操作:Home
+

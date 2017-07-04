@@ -3,9 +3,15 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
+        if(cookie("username")){
+            $this->display("Public/base");
+
+        }else{
+            $this->error("尚未登陆","login",2);
+        }
         $this->display("index");
     }
-    public function add_article(){
+    /*public function add_article(){
         $this->display("add_article");
     }
     public function add_flink(){
@@ -44,14 +50,16 @@ class IndexController extends Controller {
     public function updateflink(){
         $this->display("updateflink");
     }
-    public function login(){
-        $this->display("login");
-    }
+
     public function add_notice(){
         $this->display("add_notice");
     }
     public function flink(){
         $this->display();
-    }
+    }*/
+
+   /* public function login(){
+        $this->display("login");
+    }*/
 
 }
